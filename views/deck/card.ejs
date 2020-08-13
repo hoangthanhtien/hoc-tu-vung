@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card EJS</title>
+  </head>
+  <body>
+    <ul>
+      <%cards.forEach(card =>{%>
+      <li><%=card.title%> - <%=card.meaning%> - <%=card.example%></li>
+      <%})%>
+    </ul>
+  </body>
+</html>

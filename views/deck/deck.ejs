@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deck EJS</title>
+  </head>
+  <body>
+    <h1>Add new Deck</h1>
+    <form action="/decks" method="POST">
+      <label for="name">New Deck Name</label>
+      <input type="text" name="name" id="name" />
+      <button type="submit">Add</button>
+    </form>
+    <h2>All Decks:</h2>
+    <%decks.forEach(deck =>{%>
+    <li>
+      <%=deck.name%> - <a href="/decks/<%=deck._id%>/cards">Show Cards</a>
+    </li>
+    <%})%>
+  </body>
+</html>
